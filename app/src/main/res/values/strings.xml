@@ -2,7 +2,13 @@
 <resources>
 
     <string name="app_name">MediaTest</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="options">
+        <item>Play/Pause</item>
+        <item>Next Track</item>
+        <item>Previous Track</item>
+        <item>Toggle Flashlight</item>
+    </string-array>
 
 </resources>
