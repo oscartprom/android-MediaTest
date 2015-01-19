@@ -3,7 +3,8 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center_vertical">
+              android:gravity="center_vertical"
+              android:padding="10dp">
 
     <TextView
         android:layout_width="wrap_content"
@@ -11,79 +12,47 @@
         android:text="Bluetooth Status: Off"
         android:id="@+id/textViewBluetoothStatus"
         android:textSize="24sp"
-        android:padding="10dp"/>
+        android:layout_marginBottom="10dp"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Device Status: Disconnected"
-        android:id="@+id/textViewDeviceStatus"
-        android:textSize="24sp"
-        android:padding="10dp"/>
+        android:text="Single Press"
+        android:id="@+id/staticTextView1"
+        android:textSize="24sp"/>
 
-    <LinearLayout
-        android:orientation="horizontal"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:padding="10dp">
+        android:id="@+id/spinnerSingle"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Single Press"
-            android:id="@+id/staticTextView1"
-            android:textSize="24sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double Press"
+        android:id="@+id/staticTextView2"
+        android:textSize="24sp"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnerSingle"
-            android:layout_centerVertical="true"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:padding="10dp">
+        android:id="@+id/spinnerDouble"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Double Press"
-            android:id="@+id/staticTextView2"
-            android:textSize="24sp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long Press"
+        android:id="@+id/staticTextView3"
+        android:textSize="24sp"/>
 
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnerDouble"
-            android:layout_centerVertical="true"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
+    <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:padding="10dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Long Press"
-            android:id="@+id/staticTextView3"
-            android:textSize="24sp"/>
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnerLong"
-            android:layout_centerVertical="true"/>
-    </LinearLayout>
+        android:id="@+id/spinnerLong"
+        android:layout_centerVertical="true"/>
 
 </LinearLayout>

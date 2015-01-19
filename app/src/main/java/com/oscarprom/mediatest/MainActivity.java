@@ -68,17 +68,26 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     mIntentFilter.addAction("com.andrew.apollo.metachanged");
     registerReceiver(mReceiver, mIntentFilter);
 
-    Spinner spinnerSingle = (Spinner) findViewById(R.id.spinnerSingle);
-    Spinner spinnerDouble = (Spinner) findViewById(R.id.spinnerDouble);
-    Spinner spinnerLong = (Spinner) findViewById(R.id.spinnerLong);
     ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.options, android.R.layout.simple_spinner_item);
     adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+    Spinner spinnerSingle = (Spinner) findViewById(R.id.spinnerSingle);
     spinnerSingle.setAdapter(adapter);
     spinnerSingle.setOnItemSelectedListener(this);
+    spinnerSingle.setSelection(1);
+    mSingleAction = Constants.ACTION_NEXT;
+
+    Spinner spinnerDouble = (Spinner) findViewById(R.id.spinnerDouble);
     spinnerDouble.setAdapter(adapter);
     spinnerDouble.setOnItemSelectedListener(this);
+    spinnerDouble.setSelection(2);
+    mDoubleAction = Constants.ACTION_PREV;
+
+    Spinner spinnerLong = (Spinner) findViewById(R.id.spinnerLong);
     spinnerLong.setAdapter(adapter);
     spinnerLong.setOnItemSelectedListener(this);
+    spinnerLong.setSelection(0);
+    mLongAction = Constants.ACTION_PLAYPAUSE;
   }
 
   public void socketConnected(BluetoothSocket socket) {
@@ -173,28 +182,6 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
   @Override
   public void onNothingSelected(AdapterView<?> parent) {}
-
-  @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    // Inflate the menu; this adds items to the action bar if it is present.
-    getMenuInflater().inflate(R.menu.menu_main, menu);
-    return true;
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    // Handle action bar item clicks here. The action bar will
-    // automatically handle clicks on the Home/Up button, so long
-    // as you specify a parent activity in AndroidManifest.xml.
-    int id = item.getItemId();
-
-    //noinspection SimplifiableIfStatement
-    if (id == R.id.action_settings) {
-        return true;
-    }
-
-    return super.onOptionsItemSelected(item);
-  }
 
   @Override
   public void onPause() {

@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">MediaTest</string>
-    <string name="action_settings">Settings</string>
 
     <string-array name="options">
         <item>Play/Pause</item>
