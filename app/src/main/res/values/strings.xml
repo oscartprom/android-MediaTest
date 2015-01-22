@@ -4,10 +4,12 @@
     <string name="app_name">MediaTest</string>
 
     <string-array name="options">
+        <item>Do Nothing</item>
         <item>Play/Pause</item>
         <item>Next Track</item>
         <item>Previous Track</item>
         <item>Toggle Flashlight</item>
+        <item>Send Text Message</item>
     </string-array>
 
 </resources>

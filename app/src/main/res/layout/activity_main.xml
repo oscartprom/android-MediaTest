@@ -26,6 +26,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerSingle"
         android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Single details..."
+        android:id="@+id/detailsSingle"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -40,6 +47,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/spinnerDouble"
         android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double details..."
+        android:id="@+id/detailsDouble"
         android:layout_marginBottom="10dp"/>
 
     <TextView
@@ -53,6 +67,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/spinnerLong"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Long details..."
+        android:id="@+id/detailsLong"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Single"
+            android:id="@+id/buttonTestSingle"
+            android:layout_weight="1"
+            android:onClick="testSingle"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Double"
+            android:id="@+id/buttonTestDouble"
+            android:layout_weight="1"
+            android:onClick="testDouble"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Long"
+            android:id="@+id/buttonTestLong"
+            android:layout_weight="1"
+            android:onClick="testLong"/>
+    </LinearLayout>
 
 </LinearLayout>

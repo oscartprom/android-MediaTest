@@ -6,8 +6,10 @@ public class Constants {
   public static final int PRESS_DOUBLE = 2;
   public static final int PRESS_LONG = 3;
 
-  public static final int ACTION_NEXT = 50;
-  public static final int ACTION_PREV = 51;
-  public static final int ACTION_PLAYPAUSE = 52;
-  public static final int ACTION_TOGGLEFLASHLIGHT = 53;
+  public static final int ACTION_DONOTHING = 50;
+  public static final int ACTION_NEXT = 51;
+  public static final int ACTION_PREV = 52;
+  public static final int ACTION_PLAYPAUSE = 53;
+  public static final int ACTION_TOGGLEFLASHLIGHT = 54;
+  public static final int ACTION_SENDSMS = 55;
 }
