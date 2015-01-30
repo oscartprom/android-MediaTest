@@ -45,10 +45,11 @@ public class ConnectThread extends Thread {
       catch (IOException closeIoe) {
         closeIoe.printStackTrace();
       }
+      mCallingActivity.socketConnected(null, false);
       return;
     }
 
-    mCallingActivity.socketConnected(mBluetoothSocket);
+    mCallingActivity.socketConnected(mBluetoothSocket, true);
   }
 
   public void cancel() {

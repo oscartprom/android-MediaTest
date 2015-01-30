@@ -12,4 +12,6 @@ public class Constants {
   public static final int ACTION_PLAYPAUSE = 53;
   public static final int ACTION_TOGGLEFLASHLIGHT = 54;
   public static final int ACTION_SENDSMS = 55;
+  public static final int ACTION_LAUNCHAPP = 80;
+  public static final int ACTION_SHARELOCATION = 81;
 }

@@ -27,6 +27,7 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
@@ -121,11 +122,25 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
     doAction(Constants.PRESS_LONG);
   }
 
-  public void socketConnected(BluetoothSocket socket) {
+  public void socketConnected(BluetoothSocket socket, boolean success) {
 
-    mBluetoothSocket = socket;
-    ConnectedThread thread = new ConnectedThread(MainActivity.this);
-    thread.start();
+    final String message;
+    if (success)
+      message = "Device connected";
+    else
+      message = "Device NOT connected";
+
+    runOnUiThread(new Runnable() {
+      public void run() {
+        Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
+      }
+    });
+
+    if (success) {
+      mBluetoothSocket = socket;
+      ConnectedThread thread = new ConnectedThread(MainActivity.this);
+      thread.start();
+    }
   }
 
   @Override
